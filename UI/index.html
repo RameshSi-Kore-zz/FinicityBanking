@@ -17,7 +17,7 @@
 
 				// Client has to fill the claims and call the callback.
 				$.ajax({
-					url: "https://devbots.kore.net/api/users/sts",
+					url: "https://pilot-bots.kore.com/api/users/sts",
 					type: 'post',
 					headers: {
 						Authorization: "bearer xyz------"
@@ -32,7 +32,7 @@
 
 			var botOptions = {};
 			botOptions.logLevel = 'debug';
-			botOptions.koreAPIUrl = "https://devbots.kore.net/api/";
+			botOptions.koreAPIUrl = "https://pilot-bots.kore.com/api/";
 			botOptions.assertionFn = assertion;
 			/*
 			 Below config:(To support the anonymous user in test environments only.)
@@ -44,9 +44,9 @@
 			*/
 			botOptions.test = true;
 			botOptions.koreAnonymousFn = koreAnonymousFn;
-			botOptions.clientId   = "cs-0dcb0cfe-4367-575c-b7bb-7e10943c6383"; // secure client-id
+			botOptions.clientId   = "cs-b0d74bf6-9809-55b2-9240-7d0e1125c71b"; // secure client-id
 
-			botOptions.botInfo = {name:"Airline Bot","_id":"st-16abf1de-44bc-5327-9344-1323aa15e0fc"}; // bot name is case sensitive
+			botOptions.botInfo = {name:"Finicity Banking Bot","_id":"st-6374761e-02fd-5311-a002-caaae37ed284"}; // bot name is case sensitive
 			
 			var chatConfig={
 				botOptions:botOptions,
@@ -59,8 +59,39 @@
 			});
 		});
 		</script>
+		<style>
+		
+		#chatContainer{
+		position: absolute;
+    top: 0;
+    right: 0;
+		
+		}
+		.openChatWindow{
+		    float: right;
+    margin: 19px 70px 0 0;
+    border: 1px solid #00a4ff;
+    background: #fff;
+    border-radius: 4px;
+    padding: 8px;
+    color: #009dab;
+	cursor:pointer;
+		
+		}
+		
+		.openChatWindow:hover{
+		border: 1px solid #009dab;
+		}
+		
+		</style>
+	</head>
+	<body style="width: 100%; height: 100%;  margin:0; padding:0;">
+	<div style="width:100%; z-index:0; height:100%;">
+	    <img style="width: 100%;" src="../libs/images/banking.jpg"/>
+		
+	</div>
 		<div id="chatContainer" >
-		<button class="openChatWindow" >Talk to Airline Bot</button>
+		<button class="openChatWindow" >Talk to Kore Healthcare</button>
 		</div>
 	</body>
 </html>
